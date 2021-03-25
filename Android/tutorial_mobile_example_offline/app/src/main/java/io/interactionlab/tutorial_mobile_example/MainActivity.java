@@ -1,16 +1,13 @@
 package io.interactionlab.tutorial_mobile_example;
 
-import android.app.ProgressDialog;
 import android.graphics.PointF;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+import androidx.appcompat.app.AppCompatActivity;
 import java.io.File;
-
 import io.interactionlab.tutorial_mobile_example.ui.DrawModel;
 import io.interactionlab.tutorial_mobile_example.ui.DrawView;
 
@@ -23,20 +20,10 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     private float lastY;
     private DrawModel drawModel;
     private DrawView drawView;
-    private PointF tmpPoint = new PointF();
-
-    private final static String SHARED_PREF_ID = "tutorial_mobile_example";
-
-    // Download view
-    private ProgressDialog progrssDialog;
-    private Button downloadButton;
-    private Button infoButton;
-
+    private final PointF tmpPoint = new PointF();
 
     // Classifier
     private NumberClassifier numberClassifier;
-
-    // File download path
 
 
     @Override
@@ -45,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         setContentView(R.layout.activity_main);
 
         File path = MainActivity.this.getExternalFilesDir(null);
-        numberClassifier = new NumberClassifier("test_model.pb", this);
+        numberClassifier = new NumberClassifier("myModelCNN.pb", this);
 
         drawModel = new DrawModel(PIXEL_WIDTH, PIXEL_WIDTH);
 

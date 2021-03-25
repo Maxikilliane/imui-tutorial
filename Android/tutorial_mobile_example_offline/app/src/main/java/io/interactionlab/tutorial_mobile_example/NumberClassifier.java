@@ -29,7 +29,7 @@ public class NumberClassifier {
 
     public int classify(float[] pixels) {
         // Node Names
-        String inputName = "dense_1_input";
+        String inputName = "dense_input";
         String outputName = "output_node0";
 
         // Define output nodes
