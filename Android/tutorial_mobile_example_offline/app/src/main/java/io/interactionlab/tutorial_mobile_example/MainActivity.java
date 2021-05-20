@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         setContentView(R.layout.activity_main);
 
         File path = MainActivity.this.getExternalFilesDir(null);
-        numberClassifier = new NumberClassifier("myModelCNN.pb", this);
+        numberClassifier = new NumberClassifier(this);
 
         drawModel = new DrawModel(PIXEL_WIDTH, PIXEL_WIDTH);
 
@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             @Override
             public void onClick(View v) {
                 int classification = classifyNumber();
-
                 if (classification == -1) {
                     tvResult.setText("Please load model first.");
                 } else {
