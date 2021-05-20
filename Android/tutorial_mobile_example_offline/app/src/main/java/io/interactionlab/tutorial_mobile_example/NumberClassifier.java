@@ -2,15 +2,10 @@ package io.interactionlab.tutorial_mobile_example;
 
 import android.content.Context;
 
-import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 import org.tensorflow.lite.DataType;
-import org.tensorflow.lite.Interpreter;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Map;
 
 import io.interactionlab.tutorial_mobile_example.ml.Model;
 
